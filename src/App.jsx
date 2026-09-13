@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Login from "./Login.jsx";
 import Signup from "./signup.jsx";
+
 function Home() {
   const [search, setSearch] = useState("");
 
@@ -10,26 +11,30 @@ function Home() {
       name: "Fashion Jewellery",
       description: "Elegant jewellery collection",
       price: 299,
-      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500"
+      image:
+        "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500",
     },
     {
       name: "Trendy Hand Bag",
       description: "Stylish everyday handbag",
       price: 599,
-      image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+      image:
+        "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500",
     },
     {
       name: "Beauty Kit",
       description: "Complete beauty essentials",
       price: 449,
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500"
+      image:
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500",
     },
     {
       name: "Hair Accessories",
       description: "Beautiful hair accessories",
       price: 199,
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500"
-    }
+      image:
+        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500",
+    },
   ];
 
   const filteredProducts = products.filter((product) =>
@@ -39,7 +44,6 @@ function Home() {
   return (
     <div className="app">
 
-      {/* Navbar */}
       <nav className="navbar">
         <div className="logo">Bhavani Fancy</div>
 
@@ -54,7 +58,6 @@ function Home() {
         <button className="cart-btn">🛒 Cart</button>
       </nav>
 
-      {/* Hero */}
       <section className="hero" id="home">
         <div className="hero-content">
           <p className="small-title">WELCOME TO</p>
@@ -71,7 +74,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Categories */}
       <section className="section" id="categories">
         <h2>Shop By Category</h2>
 
@@ -108,7 +110,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Products */}
       <section className="section products-section" id="products">
 
         <h2>Featured Products</h2>
@@ -117,16 +118,13 @@ function Home() {
           Our latest collections
         </p>
 
-        {/* Search Bar */}
         <div className="search-box">
-
           <input
             type="text"
             placeholder="🔍 Search products..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-
         </div>
 
         <div className="products">
@@ -163,7 +161,6 @@ function Home() {
 
       </section>
 
-      {/* About */}
       <section className="about" id="about">
 
         <h2>About Bhavani Fancy</h2>
@@ -175,21 +172,19 @@ function Home() {
 
       </section>
 
-      {/* Footer */}
       <footer id="contact">
 
         <h2>Bhavani Fancy</h2>
 
         <p>Trendy • Beautiful • Affordable</p>
 
-        <p>© 2026 Bhavani Fancy. All rights reserved.</p>
+        <p>©️ 2026 Bhavani Fancy. All rights reserved.</p>
 
       </footer>
 
     </div>
   );
 }
-
 
 function App() {
   const [page, setPage] = useState("login");
@@ -212,7 +207,7 @@ function App() {
     );
   }
 
-  return <h1>Bhavani Fancy Working</h1>;
+  return <Home />;
 }
 
 export default App;
