@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Login from "./Login.jsx";
-import Signup from "./Signup.jsx";
+import Signup from "./signup.jsx";
 function Home() {
   const [search, setSearch] = useState("");
 
